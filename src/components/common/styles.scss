@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap");
+
+$main-font: "Open Sans", sans-serif;
+$secondary-font: "Quicksand", sans-serif;
+
+/*
+I wanted to use a dark background so I chose Crimson, which is a reddish magenta color,
+because it contrasts well with black. Crimson is used as the main color in the app,
+particularly with the start button and timer border. For the complementary color I chose
+a lighter green, which is roughly on the opposite side on the color wheel.
+I used the help of the following color web tools:
+https://colour-palette-generator.azurewebsites.net
+https://www.canva.com/colors/color-wheel/
+*/
+$crimson: #dc143c;
+$green: #27a57c;
+$light-yellow: #ffffeb;
+$black: black;
+$white: white;
+$dark: #252525;
+
+$main-color: $crimson;
+$complementary-color: $green;
+$background-color: $black;
+$text-color: $white;
+
+h1 {
+  font-family: $secondary-font;
+  color: $text-color;
+  font-weight: lighter;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-family: $secondary-font;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+
+  li {
+    margin-right: 35px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-color;
+  }
+}

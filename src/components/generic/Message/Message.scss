@@ -1,0 +1,8 @@
+@import "../../common/styles.scss";
+
+.message {
+  height: 22px;
+  color: $text-color;
+  margin-bottom: 10px;
+  text-shadow: 0 0 1.5px $light-yellow;
+}
