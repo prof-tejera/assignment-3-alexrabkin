@@ -4,6 +4,7 @@ import DisplayTime from "../../generic/DisplayTime";
 import { TimerContext } from "../../../context/TimerProvider";
 import { WorkoutContext } from "../../../context/WorkoutProvider";
 import { TIMERS } from "../../../utils/constants";
+import PropTypes from "prop-types";
 import "./Timer.scss";
 
 // Import FontAwesome icon
@@ -132,6 +133,10 @@ const Timer = ({ config }) => {
       </>
     </div>
   );
+};
+
+Timer.propTypes = {
+  config: PropTypes.object,
 };
 
 export default Timer;

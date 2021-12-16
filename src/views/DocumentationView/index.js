@@ -155,11 +155,10 @@ const Documentation = () => {
           component={<Timer />}
           propDocs={[
             {
-              prop: "None",
-              description:
-                "State is managed with TimerContext and WorkoutContext",
-              type: "",
-              defaultValue: "",
+              prop: "config",
+              description: "Sets the timer configuration",
+              type: "object",
+              defaultValue: "Optional. Default: None",
             },
           ]}
         />
