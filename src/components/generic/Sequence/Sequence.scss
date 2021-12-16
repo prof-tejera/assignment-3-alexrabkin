@@ -1,0 +1,39 @@
+@import "../../common/styles.scss";
+
+.sequence {
+  padding: 0 20px 0 50px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.seq-item {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+}
+
+.seq-item-container {
+  display: flex;
+  width: 180px;
+  border: 1px solid $gray;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.seq-item-active {
+  @extend .seq-item-container;
+  border: 2px solid lighten($complementary-color, 20%);
+}
+
+.seq-label {
+  font-weight: bold;
+}
+
+.total-display {
+  margin: 5px 0 15px 0;
+}

@@ -2,6 +2,11 @@
 
 .timers-view {
   display: flex;
+  padding-top: 20px;
+}
+
+.timers-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }

@@ -1,0 +1,30 @@
+@import "../../components/common/styles.scss";
+
+.workout-view {
+  display: flex;
+  padding-top: 20px;
+}
+
+.add-link {
+  background-color: $complementary-color;
+  border: 0;
+  color: $text-color;
+  padding: 10px 20px;
+  height: 30px;
+  margin: 0 40px 0 10px;
+  text-decoration: none;
+  border-radius: 25px;
+
+  &:hover {
+    background: darken($complementary-color, 10%);
+  }
+}
+
+.back-link {
+  @extend .add-link;
+  background-color: $main-color;
+
+  &:hover {
+    background: darken($main-color, 10%);
+  }
+}

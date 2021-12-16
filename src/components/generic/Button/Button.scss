@@ -47,7 +47,7 @@
   }
 }
 
-.start-btn {
+.alt-btn {
   @extend .round-btn;
 
   color: $text-color;
@@ -61,16 +61,26 @@
   }
 }
 
-.settings-btn {
+.close-btn {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  align-self: flex-end;
-  margin: 10px 20px 0px 0px;
+  align-self: flex-start;
+  margin-left: 15px;
 }
 
-.settings-icon {
-  color: $complementary-color;
+.close-icon {
+  color: $main-color;
+  font-size: 25px;
+}
+
+.close-disabled {
+  color: $gray;
+  font-size: 25px;
+}
+
+.basic-icon {
+  color: $white;
   font-size: 25px;
 }

@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 import DocumentationView from "./views/DocumentationView";
 import TimersView from "./views/TimersView";
+import WorkoutView from "./views/WorkoutView";
 import TimerProvider from "./context/TimerProvider";
+import WorkoutProvider from "./context/WorkoutProvider";
 
 const Container = styled.div`
   background: #f0f6fb;
@@ -19,7 +21,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Timers</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/docs">Documentation</Link>
@@ -28,14 +30,25 @@ function App() {
         </nav>
         <Switch>
           <Route path="/docs">
-            <TimerProvider>
-              <DocumentationView />
-            </TimerProvider>
+            <WorkoutProvider>
+              <TimerProvider>
+                <DocumentationView />
+              </TimerProvider>
+            </WorkoutProvider>
+          </Route>
+          <Route path="/add">
+            <WorkoutProvider>
+              <TimerProvider>
+                <TimersView />
+              </TimerProvider>
+            </WorkoutProvider>
           </Route>
           <Route path="/">
-            <TimerProvider>
-              <TimersView />
-            </TimerProvider>
+            <WorkoutProvider>
+              <TimerProvider>
+                <WorkoutView />
+              </TimerProvider>
+            </WorkoutProvider>
           </Route>
         </Switch>
       </Router>

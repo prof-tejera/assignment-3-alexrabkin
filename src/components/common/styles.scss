@@ -18,6 +18,7 @@ $light-yellow: #ffffeb;
 $black: black;
 $white: white;
 $dark: #252525;
+$gray: #b8b4b5;
 
 $main-color: $crimson;
 $complementary-color: $green;
@@ -48,4 +49,12 @@ nav ul {
     text-decoration: none;
     color: $main-color;
   }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  width: 320px;
+  height: 500px;
 }

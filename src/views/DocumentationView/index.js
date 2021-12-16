@@ -7,6 +7,7 @@ import Input from "../../components/generic/Input";
 import Form from "../../components/generic/Form";
 import Timer from "../../components/generic/Timer";
 import Message from "../../components/generic/Message";
+import Sequence from "../../components/generic/Sequence";
 
 const Container = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const Documentation = () => {
         <Title>Documentation</Title>
         <DocumentComponent
           title="Button"
-          component={<Button text="Hello" className="start-btn" />}
+          component={<Button text="Hello" className="round-btn" />}
           propDocs={[
             {
               prop: "text",
@@ -46,12 +47,26 @@ const Documentation = () => {
               type: "func",
               defaultValue: "Optional. Default: None",
             },
+            {
+              prop: "disabled",
+              description: "Will disable the button if set to true",
+              type: "bool",
+              defaultValue: "Optional. Default: None",
+            },
           ]}
         />
         <DocumentComponent
           title="Input"
-          component={<Input placeholder="My Input" />}
+          component={
+            <Input placeholder="My Input" onChange={(e) => console.log(e)} />
+          }
           propDocs={[
+            {
+              prop: "type",
+              description: "The input type",
+              type: "string",
+              defaultValue: "Optional. Default: None",
+            },
             {
               prop: "label",
               description: "The label that the input will have",
@@ -74,21 +89,33 @@ const Documentation = () => {
               prop: "onChange",
               description: "The function that should execute on input change",
               type: "func",
-              defaultValue: "Optional. Default: None",
+              defaultValue: "Required. Default: None",
             },
           ]}
         />
         <DocumentComponent
           title="Form"
-          component={
-            <Form type="Tabata" onSubmit={() => console.log("Submitted!")} />
-          }
+          component={<Form />}
           propDocs={[
             {
-              prop: "onSubmit",
-              description: "The function that should execute on form submit",
-              type: "func",
-              defaultValue: "Required. Default: None",
+              prop: "None",
+              description:
+                "State is managed with TimerContext and WorkoutContext",
+              type: "",
+              defaultValue: "",
+            },
+          ]}
+        />
+        <DocumentComponent
+          title="Sequence"
+          component={<Sequence />}
+          propDocs={[
+            {
+              prop: "None",
+              description:
+                "State is managed with TimerContext and WorkoutContext",
+              type: "",
+              defaultValue: "",
             },
           ]}
         />
@@ -129,7 +156,8 @@ const Documentation = () => {
           propDocs={[
             {
               prop: "None",
-              description: "State is managed with TimerContext",
+              description:
+                "State is managed with TimerContext and WorkoutContext",
               type: "",
               defaultValue: "",
             },
